@@ -96,7 +96,8 @@ ORDER BY degrees.name ASC;
 
 6. Selezionare tutti i docenti che insegnano nel Dipartimento di
 Matematica (54)
-SELECT count(*)
+SELECT DISTINCT 
+teachers.name AS nome
 FROM teachers,course_teacher
 JOIN courses
 ON course_teacher.course_id = courses.id
