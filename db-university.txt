@@ -91,7 +91,7 @@ teachers.surname AS insegnante
 FROM degrees, courses, teachers
 JOIN course_teacher
 ON course_teacher.teacher_id = teachers.id
-ORDER BY degrees.name ASC;
+WHERE degrees.id= course_teacher.course_id;
 
 
 6. Selezionare tutti i docenti che insegnano nel Dipartimento di
